@@ -3,7 +3,7 @@
 
 ## Integrantes
 
-- Jharol Tordoya (trabajo individual autorizado por la docente: cumple los roles de Integrante A, B y C)
+- Jharol Tordoya
 
 ## Descripción
 
