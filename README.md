@@ -1,4 +1,5 @@
-# Gimnasio Titán
+
+# Gimnasio Titán - Práctica Git y GitHub
 
 ## Integrantes
 
