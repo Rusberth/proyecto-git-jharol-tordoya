@@ -3,45 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gimnasio Titán: planes, clases y entrenamiento personalizado">
+    <meta name="author" content="Jharol Tordoya">
     <title>Gimnasio Titán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Gimnasio Titán</h1>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#planes">Planes</a>
-            <a href="#clases">Clases</a>
-            <a href="#inscripcion">Inscripción</a>
-        </nav>
+    <!-- ========== ENCABEZADO Y MENÚ ========== -->
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <a href="#inicio" class="logo">TITÁN<span>GYM</span></a>
+
+            <button class="boton-menu" id="botonMenu" aria-label="Abrir menú">☰</button>
+
+            <nav class="menu" id="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#planes">Planes</a>
+                <a href="#clases">Clases</a>
+                <a href="#inscripcion">Inscripción</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Contenido pendiente.</p>
+
+        <!-- ========== PÁGINA PRINCIPAL ========== -->
+        <section id="inicio" class="portada">
+            <div class="contenedor">
+                <h1>Supera tus límites</h1>
+                <p>
+                    Entrena con equipos modernos, instructores certificados
+                    y clases para todos los niveles.
+                </p>
+                <a href="#planes" class="boton">Ver planes</a>
+            </div>
         </section>
 
-        <section id="planes">
-            <h2>Planes</h2>
-            <p>Contenido pendiente.</p>
+        <!-- ========== SECCIÓN 1: PLANES ========== -->
+        <section id="planes" class="seccion">
+            <div class="contenedor">
+                <h2>Nuestros planes</h2>
+                <p class="subtitulo">Elige el plan que mejor se adapte a tus objetivos.</p>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Básico</h3>
+                        <p class="precio">Bs 150 <span>/ mes</span></p>
+                        <ul>
+                            <li>Acceso a sala de máquinas</li>
+                            <li>Horario de 6:00 a 14:00</li>
+                            <li>Casillero diario</li>
+                        </ul>
+                        <button class="boton boton-plan" data-plan="Básico">Elegir plan</button>
+                    </article>
+
+                    <article class="tarjeta destacada">
+                        <span class="etiqueta">Más popular</span>
+                        <h3>Estándar</h3>
+                        <p class="precio">Bs 250 <span>/ mes</span></p>
+                        <ul>
+                            <li>Acceso a sala de máquinas</li>
+                            <li>Horario completo</li>
+                            <li>Clases grupales ilimitadas</li>
+                        </ul>
+                        <button class="boton boton-plan" data-plan="Estándar">Elegir plan</button>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Premium</h3>
+                        <p class="precio">Bs 400 <span>/ mes</span></p>
+                        <ul>
+                            <li>Todo lo del plan Estándar</li>
+                            <li>Entrenador personal</li>
+                            <li>Plan de nutrición</li>
+                        </ul>
+                        <button class="boton boton-plan" data-plan="Premium">Elegir plan</button>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="clases">
-            <h2>Clases</h2>
-            <p>Contenido pendiente.</p>
+        <!-- ========== SECCIÓN 2: CLASES ========== -->
+        <section id="clases" class="seccion seccion-oscura">
+            <div class="contenedor">
+                <h2>Horario de clases</h2>
+                <p class="subtitulo">Filtra las clases por tipo de entrenamiento.</p>
+
+                <div class="filtros">
+                    <button class="filtro activo" data-tipo="todas">Todas</button>
+                    <button class="filtro" data-tipo="cardio">Cardio</button>
+                    <button class="filtro" data-tipo="fuerza">Fuerza</button>
+                    <button class="filtro" data-tipo="flexibilidad">Flexibilidad</button>
+                </div>
+
+                <div class="clases" id="listaClases">
+                    <div class="clase" data-tipo="cardio">
+                        <h3>Spinning</h3>
+                        <p>Lunes y miércoles · 7:00</p>
+                    </div>
+                    <div class="clase" data-tipo="fuerza">
+                        <h3>CrossFit</h3>
+                        <p>Martes y jueves · 18:00</p>
+                    </div>
+                    <div class="clase" data-tipo="flexibilidad">
+                        <h3>Yoga</h3>
+                        <p>Lunes y viernes · 8:00</p>
+                    </div>
+                    <div class="clase" data-tipo="cardio">
+                        <h3>Zumba</h3>
+                        <p>Miércoles y viernes · 19:00</p>
+                    </div>
+                    <div class="clase" data-tipo="fuerza">
+                        <h3>Funcional</h3>
+                        <p>Lunes a viernes · 12:00</p>
+                    </div>
+                    <div class="clase" data-tipo="flexibilidad">
+                        <h3>Pilates</h3>
+                        <p>Sábados · 9:00</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="inscripcion">
-            <h2>Inscripción</h2>
-            <p>Formulario pendiente.</p>
+        <!-- ========== SECCIÓN 3: INSCRIPCIÓN (FORMULARIO) ========== -->
+        <section id="inscripcion" class="seccion">
+            <div class="contenedor">
+                <h2>Inscríbete</h2>
+                <p class="subtitulo">Completa tus datos y te contactaremos.</p>
+
+                <form id="formInscripcion" class="formulario" novalidate>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+                    <small class="error" id="errorNombre"></small>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="Ej: juan@correo.com">
+                    <small class="error" id="errorCorreo"></small>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="Ej: 71234567">
+                    <small class="error" id="errorTelefono"></small>
+
+                    <label for="plan">Plan</label>
+                    <select id="plan">
+                        <option value="">-- Selecciona un plan --</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Estándar">Estándar</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                    <small class="error" id="errorPlan"></small>
+
+                    <button type="submit" class="boton">Enviar inscripción</button>
+                </form>
+
+                <p class="mensaje-exito" id="mensajeExito"></p>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>Gimnasio Titán © 2026</p>
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="pie">
+        <p>Gimnasio Titán © 2026 · Proyecto de práctica Git y GitHub · Jharol Tordoya</p>
     </footer>
 
     <script src="script.js"></script>
