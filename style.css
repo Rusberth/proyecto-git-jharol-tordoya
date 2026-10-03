@@ -1,1 +1,363 @@
-/* Estilos del Gimnasio Titán (pendiente) */
+/* ==========================================
+   Estilos del Gimnasio Titán
+   ========================================== */
+
+/* ---------- Colores y tipografías ---------- */
+:root {
+    --color-principal: #ff5722;
+    --color-principal-hover: #e64a19;
+    --color-oscuro: #1c1c1c;
+    --color-gris: #2b2b2b;
+    --color-claro: #f5f5f5;
+    --color-texto: #333333;
+    --color-error: #d32f2f;
+    --color-exito: #2e7d32;
+
+    --fuente-titulos: "Oswald", Arial, sans-serif;
+    --fuente-texto: "Poppins", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    background-color: var(--color-claro);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-family: var(--fuente-texto);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--color-principal-hover);
+    transform: translateY(-2px);
+}
+
+/* ---------- Encabezado y menú ---------- */
+.encabezado {
+    background-color: var(--color-oscuro);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.encabezado-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-principal);
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-principal);
+}
+
+.boton-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ---------- Página principal (portada) ---------- */
+.portada {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        linear-gradient(135deg, #3a3a3a, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 130px 0;
+}
+
+.portada h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.portada p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* ---------- Diseño de las secciones ---------- */
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--color-oscuro);
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.seccion-oscura {
+    background-color: var(--color-gris);
+}
+
+.seccion-oscura h2,
+.seccion-oscura .subtitulo {
+    color: white;
+}
+
+/* Tarjetas de planes */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    position: relative;
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+}
+
+.tarjeta.destacada {
+    border: 3px solid var(--color-principal);
+}
+
+.etiqueta {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-principal);
+    color: white;
+    padding: 3px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.precio {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    margin: 10px 0 20px;
+}
+
+.precio span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.tarjeta ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.tarjeta li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Filtros y clases */
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filtro {
+    background: none;
+    border: 2px solid var(--color-principal);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: var(--fuente-texto);
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    background-color: var(--color-principal);
+}
+
+.clases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.clase {
+    background-color: var(--color-oscuro);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-principal);
+}
+
+.clase h3 {
+    margin-bottom: 5px;
+}
+
+.clase p {
+    color: #bbb;
+}
+
+/* Formulario */
+.formulario {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+.formulario .invalido {
+    border-color: var(--color-error);
+}
+
+.formulario .boton {
+    margin-top: 25px;
+}
+
+.error {
+    color: var(--color-error);
+    min-height: 18px;
+}
+
+.mensaje-exito {
+    text-align: center;
+    color: var(--color-exito);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+    background-color: var(--color-oscuro);
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Diseño para celulares ---------- */
+@media (max-width: 700px) {
+    .boton-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-oscuro);
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .portada h1 {
+        font-size: 2.4rem;
+    }
+}
